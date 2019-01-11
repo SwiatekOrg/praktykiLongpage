@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $font, sans-serif;
+    background-color: gray;
+    height: 200vh;
+}
+
+.nav-all{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #fff;
+    height: $nav-height;
+    width: 100%;
+    margin: 0;
+    @include flex(row,nowrap,flex-start);
+    .nav-header-img{
+        width: 300px;
+        header{
+            height: $nav-height;
+            padding: 28px;
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+    }
+    .nav-list{
+        flex-grow: 1;
+        display: flex;
+        nav{
+            flex-grow: 1;
+            ol{
+                @include flex(row,nowrap);
+                list-style: none;
+                font-weight: 700;
+                padding-left: 0;
+                white-space: nowrap;
+                li{
+                    max-height: $nav-height;
+                    a{
+                        display: block;
+                        padding-right: 25px;
+                        line-height: $nav-height;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        color: $nav-a-color;
+                        letter-spacing: 1px;
+                        &:hover{
+                            text-decoration: none;
+                            color: $nav-a-hover-color;
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            width: 250px;
+                            line-height: 40px;
+                            margin: 30px 0;
+                            padding-right: 0;
+                            text-align: center;
+                            background-color: $main-color;
+                            box-shadow: 0 0 0 2px $main-color;
+                            color: #fff;
+                            border-radius: 2px;
+                            transition: .2s all linear;        
+                            &:hover{
+                                background-color: #fff;
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav-search-icon{
+            min-width: 200px;
+            text-align: right;
+            height: $nav-height;
+            a{
+                margin: 0 25px;
+                color: $nav-a-color;
+                height: 100%;
+                width: 100%;
+                i{
+                    line-height: $nav-height;
+                    width: 40px;
+                    font-size: 18px;
+                    &:hover{
+                        color: $nav-a-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,21 @@
+// @mixin transform($property) {
+//     -webkit-transform: $property;
+//     -ms-transform: $property;
+//     transform: $property;
+//   }
+//   .box {
+//    @include transform(rotate(30deg));
+// }
+
+@mixin flex($direction,$wrap,$justify: center){
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+}
+
+@mixin centerInBox(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
