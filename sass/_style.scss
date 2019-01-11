@@ -10,7 +10,6 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    overflow: hidden;
     background-color: #fff;
     height: $nav-height;
     width: 100%;
@@ -87,9 +86,51 @@ body{
                 i{
                     line-height: $nav-height;
                     width: 40px;
-                    font-size: 18px;
+                    font-size: 30px;
                     &:hover{
                         color: $nav-a-hover-color;
+                    }
+                }
+            }
+        }
+        .search-window{
+            display: none;
+            position: absolute;
+            top: $nav-height;
+            right: 0;
+            height: 80px;
+            width: $search-window-width;
+            background-color: #fff;
+            &.active{
+                display: block;
+            }
+            div{
+                width: 100%;
+                @include centerInBox();
+                input{
+                    box-sizing: content-box;
+                    width: 65%;
+                    height: 45px;
+                    font-size: 30px;
+                    margin-left: 35px;
+                    border: none;
+                    &:focus{
+                        outline: none;
+                    }
+                    
+                }
+                button{
+                    border: none;
+                    background-color: #fff;
+                    font-size: 34px;
+                    padding-left: 20px;
+                    overflow: hidden;
+                    transition: 0.1s all linear;
+                    &:focus{
+                        outline: none;
+                    }
+                    &:hover{
+                        transform: scale(1.2)
                     }
                 }
             }

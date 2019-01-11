@@ -10,7 +10,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  overflow: hidden;
   background-color: #fff;
   height: 100px;
   width: 100%;
@@ -128,10 +127,66 @@ body {
 .nav-all .nav-list .nav-search-icon a i {
   line-height: 100px;
   width: 40px;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .nav-all .nav-list .nav-search-icon a i:hover {
   color: #aaa;
+}
+
+.nav-all .nav-list .search-window {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  height: 80px;
+  width: 350px;
+  background-color: #fff;
+}
+
+.nav-all .nav-list .search-window.active {
+  display: block;
+}
+
+.nav-all .nav-list .search-window div {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.nav-all .nav-list .search-window div input {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 65%;
+  height: 45px;
+  font-size: 30px;
+  margin-left: 35px;
+  border: none;
+}
+
+.nav-all .nav-list .search-window div input:focus {
+  outline: none;
+}
+
+.nav-all .nav-list .search-window div button {
+  border: none;
+  background-color: #fff;
+  font-size: 34px;
+  padding-left: 20px;
+  overflow: hidden;
+  -webkit-transition: 0.1s all linear;
+  transition: 0.1s all linear;
+}
+
+.nav-all .nav-list .search-window div button:focus {
+  outline: none;
+}
+
+.nav-all .nav-list .search-window div button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=main.css.map */
