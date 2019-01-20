@@ -1,12 +1,10 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: $font, sans-serif;
-    background-color: gray;
-    height: 200vh;
 }
 
-.nav-all{
+.nav-all {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,34 +13,42 @@ body{
     width: 100%;
     margin: 0;
     z-index: 100;
-    @include flex(row,nowrap,flex-start);
-    .nav-header-img{
+    @include flex(row, nowrap, flex-start);
+
+    .nav-header-img {
         width: 300px;
-        header{
+
+        header {
             height: $nav-height;
             padding: 28px;
-            img{
+
+            img {
                 height: 100%;
                 width: auto;
             }
         }
-        
+
     }
-    .nav-list{
+
+    .nav-list {
         flex-grow: 1;
         display: flex;
-        nav{
+
+        nav {
             flex-grow: 1;
             background-color: #fff;
-            ol{
-                @include flex(row,nowrap);
+
+            ol {
+                @include flex(row, nowrap);
                 list-style: none;
                 font-weight: 700;
                 padding-left: 0;
                 white-space: nowrap;
-                li{
+
+                li {
                     max-height: $nav-height;
-                    a{
+
+                    a {
                         display: block;
                         padding-right: 25px;
                         line-height: $nav-height;
@@ -50,13 +56,15 @@ body{
                         font-size: 14px;
                         color: $nav-a-color;
                         letter-spacing: 1px;
-                        &:hover{
+
+                        &:hover {
                             text-decoration: none;
                             color: $nav-a-hover-color;
                         }
                     }
-                    &:last-child{
-                        a{
+
+                    &:last-child {
+                        a {
                             width: 250px;
                             line-height: 40px;
                             margin: 30px 0;
@@ -66,8 +74,9 @@ body{
                             box-shadow: 0 0 0 2px $main-color;
                             color: #fff;
                             border-radius: 2px;
-                            transition: .2s all linear;        
-                            &:hover{
+                            transition: .2s all linear;
+
+                            &:hover {
                                 background-color: #fff;
                                 color: $main-color;
                             }
@@ -76,68 +85,80 @@ body{
                 }
             }
         }
-        .nav-search-icon{
+
+        .nav-search-icon {
             min-width: 200px;
             text-align: right;
             height: $nav-height;
             background-color: #fff;
-            a{
+
+            a {
                 margin: 0 40px;
                 color: $nav-a-color;
                 height: 100%;
                 width: 100%;
-                i{
+
+                i {
                     line-height: $nav-height;
                     width: 40px;
                     font-size: 30px;
-                    &:hover{
+
+                    &:hover {
                         color: $nav-a-hover-color;
                     }
                 }
             }
         }
-        .search-window{
+
+        .search-window {
             //Wlaczony wyjazd z gory, mozliwosc wjazdu z prawej lub pojawienia sie
             //display: none;
             position: absolute;
-            top: 0;//$nav-height;
-            right: 0;//-$search-window-width;
+            top: 0; //$nav-height;
+            right: 0; //-$search-window-width;
             height: 80px;
             width: $search-window-width;
             background-color: #fff;
             transition: .2s all linear;
             z-index: -1;
-            &.active{
+
+            &.active {
                 //display: block;
                 //right: 0;
                 top: $nav-height;
             }
-            div{
+
+            div {
                 width: 100%;
                 @include centerInBox();
-                input{
+
+                input {
                     box-sizing: content-box;
                     width: 65%;
                     height: 45px;
                     font-size: 30px;
                     margin-left: 35px;
                     border: none;
-                    &:focus{
+
+                    &:focus {
                         outline: none;
                     }
-                    
+
                 }
-                button{
+
+                button {
                     border: none;
                     background-color: #fff;
                     font-size: 34px;
                     padding-left: 20px;
                     overflow: hidden;
                     transition: 0.1s all linear;
-                    &:focus{
+
+                    &:focus {
                         outline: none;
                     }
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.2)
                     }
                 }
@@ -145,4 +166,3 @@ body{
         }
     }
 }
-

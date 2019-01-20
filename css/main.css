@@ -2,8 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: Athiti, sans-serif;
-  background-color: gray;
-  height: 200vh;
 }
 
 .nav-all {
@@ -207,10 +205,9 @@ section.slider {
 
 .center-box .blue-box {
   width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
   background-color: #15253c;
   color: #fff;
-  height: 360px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -225,7 +222,7 @@ section.slider {
 
 .center-box .blue-box .left-text h1 {
   font-size: 64px;
-  margin: 50px 0 0 20px;
+  margin: 50px 0 50px 20px;
   font-weight: 600;
 }
 
@@ -238,9 +235,26 @@ section.slider {
   margin: 60px 10px 0 20px;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1225px) {
   .center-box .blue-box {
     width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .center-box .blue-box .left-text {
+    text-align: center;
+  }
+  .center-box .blue-box .left-text h1 {
+    font-size: 42px;
+    margin: 50px 0 15px 0;
+  }
+  .center-box .blue-box .right-text {
+    text-align: center;
+    font-size: 28px;
+  }
+  .center-box .blue-box .right-text p {
+    margin: 28px;
   }
 }
 /*# sourceMappingURL=main.css.map */
