@@ -3,7 +3,7 @@ body{
 }
 
 section.slider {
-    margin-top: $nav-height;
+    margin-top: var(--nav-height);
     height: 60vh;
     background-color: black;
 }

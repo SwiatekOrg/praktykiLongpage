@@ -2,7 +2,7 @@
    padding: 0;
     .header{
         text-align: center;
-        @include margin(0,6rem,0,0)
+        @include margin(0,6rem,0,0);
         h2{
             font-size: $headings-fs;
             font-weight: 700;
@@ -49,16 +49,6 @@
                      display: inline-block;
                      @include margin(0.4rem, 0.4rem, 1rem, 0.4rem);
                  }
-
-            }
-        }
-    }
-}
-
-@media(max-width: 991px){
-    .offer-container{
-        .offer-article{
-            ul{
 
             }
         }
