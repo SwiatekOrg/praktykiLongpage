@@ -1,12 +1,3 @@
-// @mixin transform($property) {
-//     -webkit-transform: $property;
-//     -ms-transform: $property;
-//     transform: $property;
-//   }
-//   .box {
-//    @include transform(rotate(30deg));
-// }
-
 @mixin flex($direction: row,$wrap: nowrap,$justify: center){
     display: flex;
     flex-flow: $direction $wrap;

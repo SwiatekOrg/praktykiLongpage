@@ -245,6 +245,7 @@ section.slider {
 
 .company-info {
   background-color: #ddd;
+  margin-bottom: 12rem;
 }
 
 .company-info .info-item {
@@ -253,10 +254,27 @@ section.slider {
 
 .company-info .info-item .content {
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
   text-align: center;
   font-size: 8rem;
   padding: 10rem 0;
+}
+
+.company-info .info-item .content i {
+  color: #15253c;
+}
+
+.box-with-reference {
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.box-with-reference .content {
+  background-color: #15253c;
+  height: 30rem;
+  border-radius: 2rem;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
 }
 
 @media (max-width: 1225px) {
