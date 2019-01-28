@@ -9,32 +9,30 @@ section.slider {
 }
 
 .center-box {
-    margin-bottom: 150px;
+    margin-bottom: $box-margin-bottom;
     .blue-box {
         max-width: 1100px;
-        margin: 0 auto;
+        @include margin();
         background-color: $primary-color;
         color: #fff;
-        transform: translateY(-10%);
+        transform: translateY($box-translateY);
         border-radius: 15px;
         .box-container{
             box-sizing: border-box;
             padding: 10px 10px 40px 10px;
             .left-text {
                 text-align: right;
-
                 h1 {
-                    font-size: 64px;
+                    font-size: $text-left-fs;
                     margin: 50px 0 50px 20px;
                     font-weight: 600;
                 }
             }
-
             .right-text {
                 text-align: left;
-                font-size: 24px;
+                font-size: $text-right-fs;
                 p {
-                    margin: 60px 10px 0 20px
+                    margin: 60px 10px 0 20px;
                 }
             }
         }

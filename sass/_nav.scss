@@ -71,15 +71,15 @@ body {
                             margin: 30px 0;
                             padding-right: 0;
                             text-align: center;
-                            background-color: $primary-color;
-                            box-shadow: 0 0 0 2px $primary-color;
+                            background-color: $nav-button-color;
+                            box-shadow: 0 0 0 2px  $nav-button-color;
                             color: #fff;
                             border-radius: 2px;
                             transition: .2s all linear;
 
                             &:hover {
                                 background-color: #fff;
-                                color: $primary-color;
+                                color:  $nav-button-color;
                             }
                         }
                     }
@@ -151,7 +151,7 @@ body {
                     border: none;
                     background-color: #fff;
                     font-size: 34px;
-                    padding-left: 20px;
+                    padding-left: 16px;
                     overflow: hidden;
                     transition: 0.1s all linear;
 
