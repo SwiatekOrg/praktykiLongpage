@@ -20,3 +20,5 @@ menu.addEventListener('click',function(){
     menu.classList.toggle('active');
     nav.classList.toggle('mobile')
 })
+
+// Zmniejszony navbar po zjechaniu

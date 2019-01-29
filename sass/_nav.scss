@@ -8,7 +8,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: $primary-color;
     height: $nav-height;
     width: 100%;
     margin: 0;
@@ -20,8 +20,6 @@ body {
         header {
             height: 100%;
             padding: 28px;
-            background-color: #fff;
-
             img {
                 height: 100%;
                 width: auto;
@@ -58,7 +56,7 @@ body {
                 display: block;
                 width: 100%;
                 height: 15%;
-                background-color: black;
+                background-color: white;
                 transition-duration: .4s;
                 &:nth-child(1){
                         position: absolute;
@@ -85,11 +83,9 @@ body {
     .nav-list {
         flex-grow: 1;
         display: flex;
-        margin-left: 50px;
         nav {
             flex-grow: 1;
-            background-color: #fff;
-
+            //padding-left: 50px;
             ol {
                 @include flex(row, nowrap);
                 list-style: none;
@@ -108,10 +104,12 @@ body {
                         font-size: 14px;
                         color: $nav-a-color;
                         letter-spacing: 1px;
-
+                        transition: .2s all linear;
+                        padding-left: 4px;
                         &:hover {
                             text-decoration: none;
                             color: $nav-a-hover-color;
+                            transform: scale(1.1)
                         }
                     }
 
@@ -123,15 +121,18 @@ body {
                             padding-right: 0;
                             margin-right: 2px;
                             text-align: center;
-                            background-color: $nav-button-color;
+                            background-color: white;
                             box-shadow: 0 0 0 2px  $nav-button-color;
-                            color: #fff;
+                            color: $primary-color;
                             border-radius: 2px;
                             transition: .2s all linear;
 
                             &:hover {
                                 background-color: #fff;
+                                //font-size: 15px;
                                 color:  $nav-button-color;
+                                transform: scale(1.1);
+                                box-shadow: 0 0 0 1px #38ff98;
                             }
                         }
                     }
@@ -140,10 +141,11 @@ body {
         }
 
         .nav-search-icon {
-            min-width: 200px;
+            min-width: 50px;
+            padding-right: 25px;
             text-align: right;
             height: $nav-height;
-            background-color: #fff;
+            //background-color: #fff;
 
             a {
                 margin: 0 40px;
@@ -155,66 +157,65 @@ body {
                     line-height: $nav-height;
                     width: 40px;
                     font-size: 30px;
-
+                    transition: .1s;
                     &:hover {
                         color: $nav-a-hover-color;
+                        transform: scale(1.2)
                     }
                 }
             }
         }
+    }
+}
 
-        .search-window {
-            //Wlaczony wyjazd z gory, mozliwosc wjazdu z prawej lub pojawienia sie
-            //display: none;
-            position: absolute;
-            top: 0; //$nav-height;
-            right: 0; //-$search-window-width;
-            height: 80px;
-            width: $search-window-width;
-            background-color: #fff;
-            transition: .2s all linear;
-            z-index: -1;
+.search-window {
+    //Wlaczony wyjazd z gory, mozliwosc wjazdu z prawej lub pojawienia sie
+    //display: none;
+    position: fixed;
+    top: 0; //$nav-height;
+    right: 0; //-$search-window-width;
+    height: 80px;
+    width: $search-window-width;
+    background-color: #fff;
+    transition: .2s all linear;
+    &.active {
+        //display: block;
+        //right: 0;
+        top: $nav-height;
+    }
 
-            &.active {
-                //display: block;
-                //right: 0;
-                top: $nav-height;
+    div {
+        width: 100%;
+        @include centerInBox();
+
+        input {
+            box-sizing: content-box;
+            width: 65%;
+            height: 45px;
+            font-size: 30px;
+            margin-left: 35px;
+            border: none;
+
+            &:focus {
+                outline: none;
             }
 
-            div {
-                width: 100%;
-                @include centerInBox();
+        }
 
-                input {
-                    box-sizing: content-box;
-                    width: 65%;
-                    height: 45px;
-                    font-size: 30px;
-                    margin-left: 35px;
-                    border: none;
+        button {
+            border: none;
+            background-color: #fff;
+            font-size: 34px;
+            padding-left: 30px;
+            overflow: hidden;
+            transition: 0.1s all linear;
 
-                    &:focus {
-                        outline: none;
-                    }
+            &:focus {
+                outline: none;
+            }
 
-                }
-
-                button {
-                    border: none;
-                    background-color: #fff;
-                    font-size: 34px;
-                    padding-left: 16px;
-                    overflow: hidden;
-                    transition: 0.1s all linear;
-
-                    &:focus {
-                        outline: none;
-                    }
-
-                    &:hover {
-                        transform: scale(1.2)
-                    }
-                }
+            &:hover {
+                transform: scale(1.2)
             }
         }
     }
@@ -239,6 +240,7 @@ body {
             width: 100%;
             left: 0;
             margin: 0;
+            background-color: $primary-color;
             nav{
                 ol{
                     flex-direction: column;
@@ -254,6 +256,10 @@ body {
                             a{
                                 @include centerInBox();
                                 margin: 0;
+                                transform-origin: center;
+                                &:hover{
+                                    transform: scale(1.1) translate(-45%,-50%);
+                                }
                             }
                         }
                     }

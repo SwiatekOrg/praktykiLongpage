@@ -1,15 +1,19 @@
 body{
     overflow-x: hidden;
+    background-color: #fff;
 }
 
 section.slider {
-    margin-top: $nav-height;
-    height: 60vh;
-    background-color: black;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/headerImg.jpg');
+    background-position: center;
+
 }
 
 .center-box {
-    margin-bottom: $box-margin-bottom;
+    padding-bottom: $box-margin-bottom;
+    background-color: transparent;
     .blue-box {
         max-width: 1100px;
         margin: 0 auto;
@@ -38,9 +42,11 @@ section.slider {
         }
     }
 }
-
+.bg-white{
+    background-color: #fff;
+}
 .company-info{
-    background-color: #ddd;
+    background-color: white;
     .info-item{
         position: relative;
         .content{
@@ -57,7 +63,7 @@ section.slider {
 }
 
 .box-with-reference{
-    margin-top: 2rem;
+    margin-top: 6rem;
     .content{
         background-color: $primary-color;
         height: 30rem; // tymczasowo
