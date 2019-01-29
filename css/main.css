@@ -615,7 +615,7 @@ section.slider {
 }
 
 .offer-container .tiles {
-  margin: 3rem 0;
+  margin: 3rem auto;
 }
 
 .offer-container .items-height {

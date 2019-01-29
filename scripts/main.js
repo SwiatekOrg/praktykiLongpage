@@ -42,3 +42,15 @@ document.addEventListener('scroll',function(){
         menu.classList.remove('active')
     }
 })
+
+//dodanie klasy dla lepszych marginow przy >1200px
+
+const kafelki = document.querySelector('.tiles')
+
+window.addEventListener('resize', addContainerToTiles)
+window.addEventListener('load',addContainerToTiles)
+
+function addContainerToTiles(){
+    if(window.innerWidth < 1200) kafelki.classList.add('container')
+    else kafelki.classList.remove('container')
+  }
