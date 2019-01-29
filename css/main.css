@@ -86,7 +86,7 @@ body {
 
 .nav-all .menu-hamburger .hamburger .line:nth-child(1) {
   position: absolute;
-  top: 0;
+  top: 20%;
   left: 0;
   -webkit-animation: first-line .5s linear both paused;
           animation: first-line .5s linear both paused;
@@ -102,7 +102,7 @@ body {
 
 .nav-all .menu-hamburger .hamburger .line:nth-child(3) {
   position: absolute;
-  top: 100%;
+  top: 80%;
   left: 0;
   -webkit-animation: first-line .5s linear both paused;
           animation: first-line .5s linear both paused;
@@ -161,11 +161,15 @@ body {
   color: #aaa;
 }
 
+.nav-all .nav-list nav ol li:last-child {
+  margin: auto 0;
+}
+
 .nav-all .nav-list nav ol li:last-child a {
   width: 250px;
-  line-height: 40px;
-  margin: 30px 2px;
+  line-height: 230%;
   padding-right: 0;
+  margin-right: 2px;
   text-align: center;
   background-color: #15253c;
   -webkit-box-shadow: 0 0 0 2px #15253c;
@@ -396,7 +400,6 @@ section.slider {
 
 .box-with-reference {
   margin-top: 2rem;
-  padding: 0 2rem;
 }
 
 .box-with-reference .content {
@@ -428,11 +431,14 @@ section.slider {
   .center-box .blue-box .box-container .right-text p {
     margin: 28px;
   }
+  .company-info .info-item .content {
+    padding: 5rem 0;
+  }
 }
 
 .offer-container .header {
   text-align: center;
-  margin: 12rem 0 6rem 0;
+  padding: 12rem 0 6rem 0;
 }
 
 .offer-container .header h2 {
@@ -496,14 +502,17 @@ section.slider {
   margin: 0.4rem 1rem 0.4rem 0.4rem;
 }
 
+.offer-container .tiles {
+  margin: 3rem 0;
+}
+
 .offer-container .items-height {
   height: 470px;
-  padding-bottom: 2rem;
 }
 
 .offer-container .offer-item {
   text-align: center;
-  margin: 3rem 0;
+  margin: 30px 0;
   height: 100%;
 }
 
@@ -571,6 +580,22 @@ section.slider {
   cursor: pointer;
   color: #66b7ac;
   background-color: rgba(221, 221, 221, 0.6);
+}
+
+.offer-container .why-sellwise {
+  margin-bottom: 15rem;
+  text-align: center;
+}
+
+.offer-container .why-sellwise i {
+  font-size: 80px;
+  color: #15253c;
+  margin-bottom: 1.2rem;
+}
+
+.offer-container .why-sellwise h4 {
+  font-size: 21px;
+  letter-spacing: 0.2rem;
 }
 
 @media (max-width: 1200px) {

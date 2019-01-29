@@ -58,7 +58,6 @@ section.slider {
 
 .box-with-reference{
     margin-top: 2rem;
-    padding: 0 2rem;
     .content{
         background-color: $primary-color;
         height: 30rem; // tymczasowo
@@ -96,6 +95,13 @@ section.slider {
                         margin: 28px;
                     }
                 }
+            }
+        }
+    }
+    .company-info{
+        .info-item{
+            .content{
+                padding: 5rem 0;
             }
         }
     }
