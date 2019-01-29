@@ -1,25 +1,50 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: $font, sans-serif;
-}
-
 .nav-all {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: $primary-color;
     height: $nav-height;
+    transition: all .9s linear;
+    &.top{
+        height: 75px;
+        background-color: $primary-color;
+        .nav-header-img{
+            header{
+                padding: 20px;
+            }
+        }
+        .nav-list{
+            nav{
+                ol{
+                    li{
+                        a{
+                            line-height: 75px;
+                            padding: 0 25px;
+                        }
+                    }
+                }
+            }
+            .nav-search-icon{
+                display: block;
+                a{
+                    i{
+                        line-height: 75px;
+                    }
+                }
+            }
+        }
+        .menu-hamburger{
+            height: 75px;
+        }
+    }
     width: 100%;
     margin: 0;
-    z-index: 100;
+    z-index: 2;
     @include flex(row, nowrap, flex-start);
-
     .nav-header-img {
         width: 300px;
         header {
             height: 100%;
-            padding: 28px;
+            padding: 22px;
             img {
                 height: 100%;
                 width: auto;
@@ -31,13 +56,14 @@ body {
     .menu-hamburger{
         display: none;
         width: 50px;
-        height: $nav-height;
         position: relative;
+        transition: .9s height linear;
+        height: $nav-height;
         margin: 0 2rem 0 auto;
         .hamburger{
             @include centerInBox();
             width: 100%;
-            height: 35%;
+            height: 25%;
             cursor: pointer;
             &.active{
                 .line:nth-child(1){
@@ -60,32 +86,26 @@ body {
                 transition-duration: .4s;
                 &:nth-child(1){
                         position: absolute;
-                        top: 20%;
+                        top: 0;
                         left: 0;
-                        animation: first-line .5s linear both paused;
                     }
                 &:nth-child(2){
                         position: absolute;
                         top: 50%;
                         left: 0;
-                        animation: second-line .5s linear both paused;
                     }
                 &:nth-child(3){
                         position: absolute;
-                        top: 80%;
+                        top: 100%;
                         left: 0;
-                        animation: first-line .5s linear both paused;
                     }
                 }
             }
         }
-    
     .nav-list {
+        @include flex(row,nowrap,center);
         flex-grow: 1;
-        display: flex;
         nav {
-            flex-grow: 1;
-            //padding-left: 50px;
             ol {
                 @include flex(row, nowrap);
                 list-style: none;
@@ -95,17 +115,16 @@ body {
 
                 li {
                     max-height: 100%;
-
                     a {
                         display: block;
-                        padding-right: 25px;
                         line-height: $nav-height;
                         text-transform: uppercase;
                         font-size: 14px;
                         color: $nav-a-color;
                         letter-spacing: 1px;
                         transition: .2s all linear;
-                        padding-left: 4px;
+                        padding: 4px 25px;
+                        transition: .3s color linear, .3s transform linear, .9s line-height linear , .9s padding linear;
                         &:hover {
                             text-decoration: none;
                             color: $nav-a-hover-color;
@@ -118,18 +137,16 @@ body {
                         a {
                             width: 250px;
                             line-height: 230%;
-                            padding-right: 0;
+                            padding: 5px;
                             margin-right: 2px;
                             text-align: center;
                             background-color: white;
-                            box-shadow: 0 0 0 2px  $nav-button-color;
                             color: $primary-color;
                             border-radius: 2px;
                             transition: .2s all linear;
 
                             &:hover {
                                 background-color: #fff;
-                                //font-size: 15px;
                                 color:  $nav-button-color;
                                 transform: scale(1.1);
                                 box-shadow: 0 0 0 1px #38ff98;
@@ -141,12 +158,11 @@ body {
         }
 
         .nav-search-icon {
-            min-width: 50px;
-            padding-right: 25px;
-            text-align: right;
-            height: $nav-height;
-            //background-color: #fff;
-
+            display: none;
+            width: 90px;
+            position: absolute;
+            top: 0;
+            right: 0;
             a {
                 margin: 0 40px;
                 color: $nav-a-color;
@@ -169,25 +185,21 @@ body {
 }
 
 .search-window {
-    //Wlaczony wyjazd z gory, mozliwosc wjazdu z prawej lub pojawienia sie
-    //display: none;
     position: fixed;
-    top: 0; //$nav-height;
-    right: 0; //-$search-window-width;
+    top: 75px;
+    right: -$search-window-width;
     height: 80px;
     width: $search-window-width;
     background-color: #fff;
-    transition: .2s all linear;
+    transition: .3s linear all;
+    z-index: 1;
     &.active {
-        //display: block;
-        //right: 0;
-        top: $nav-height;
+        right: 0;
     }
 
     div {
         width: 100%;
         @include centerInBox();
-
         input {
             box-sizing: content-box;
             width: 65%;
@@ -195,7 +207,6 @@ body {
             font-size: 30px;
             margin-left: 35px;
             border: none;
-
             &:focus {
                 outline: none;
             }
@@ -209,7 +220,6 @@ body {
             padding-left: 30px;
             overflow: hidden;
             transition: 0.1s all linear;
-
             &:focus {
                 outline: none;
             }
@@ -222,64 +232,55 @@ body {
 }
 
 
-@media(max-width: 1200px){
+@media(max-width: 1260px){
 .nav-all .nav-list{
     display: none;
 }
 
 .nav-all .menu-hamburger{
-    display: block; 
+    display: block;
 }
 
 .mobile{
-        .nav-list{
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: $nav-height;
-            width: 100%;
-            left: 0;
-            margin: 0;
-            background-color: $primary-color;
-            nav{
-                ol{
-                    flex-direction: column;
-                    li{
-                        text-align: center;
+    .nav-list{
+        @include flex(column);
+        position: fixed;
+        top: 75px;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        background-color: $primary-color;
+        nav{
+            ol{
+                flex-direction: column;
+                li{
+                    text-align: center;
+                    a{
+                        line-height: 40px;
+                        padding: 0;
+                    }
+                    &:last-child{
+                        position: relative;
+                        height: 40px;
                         a{
-                            line-height: 40px;
-                            padding: 0;
-                        }
-                        &:last-child{
-                            position: relative;
-                            height: 40px;
-                            a{
-                                @include centerInBox();
-                                margin: 0;
-                                transform-origin: center;
-                                &:hover{
-                                    transform: scale(1.1) translate(-45%,-50%);
-                                }
+                            @include centerInBox();
+                            margin: 0;
+                            &:hover{
+                                transform: scale(1.1) translate(-45%,-50%);
                             }
                         }
                     }
                 }
             }
+            }
             .nav-search-icon{
                 display: none;
             }
-            .search-window{
-                position: relative;
-                text-align: center;
-                width: 100%;
-                input{
-                    width: 25% !important;
-                }
-            }
-
-        }
-        .menu-hamburger{
-            display: block;
         }
     }
+}
+
+
+.nav-all.mobile+.search-window.activeMobile{
+    top: 390px;
 }

@@ -1,19 +1,14 @@
-body{
-    overflow-x: hidden;
-    background-color: #fff;
-}
-
-.flex{
-    display: flex;
-}
+//glowne zdjecie
 
 section.slider {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-image: url('../img/headerImg.jpg');
     background-position: center;
 
 }
+
+//duzy prostokat z tekstami
 
 .center-box {
     padding-bottom: $box-margin-bottom;
@@ -22,9 +17,9 @@ section.slider {
         max-width: 1100px;
         margin: 0 auto;
         background-color: $primary-color;
-        color: #fff;
         transform: translateY($box-translateY);
         border-radius: 15px;
+        color: #fff;
         .box-container{
             box-sizing: border-box;
             padding: 10px 10px 40px 10px;
@@ -38,41 +33,55 @@ section.slider {
             }
             .right-text {
                 text-align: left;
-                font-size: $text-right-fs;
-                p {
+                p{
+                    font-size: $text-right-fs;
                     margin: 60px 10px 0 20px;
                 }
             }
         }
     }
 }
-.bg-white{
-    background-color: #fff;
-}
+
+//4 ikonki
+
 .company-info{
-    background-color: white;
     .info-item{
-        position: relative;
         .content{
             text-transform: uppercase;
-            letter-spacing: 0.3rem;
+            letter-spacing: 0.5rem;
             text-align: center;
-            font-size: 8rem;
             padding: 10rem 0;
+            .circle{
+                border: 3px solid  $secondary-color;
+                display: inline-block;
+                border-radius: 50%;
+                padding: 2.5rem;
+                overflow: hidden;
+            }
             i{
+                font-size: 8rem;
                 color: $primary-color;
+                width: 100px;
+                height: 100px;
+                transform: translateY(10%);
+            }
+            h4{
+                font-size: 21px;
+                margin: 2.5rem 0;
             }
         }
     }
 }
 
+// prostokat na slider
+
 .box-with-reference{
     margin-top: 6rem;
     .content{
-        background-color: $primary-color;
         height: 30rem; // tymczasowo
+        background-color: $primary-color;
+        transform: translateY(15%);
         border-radius: 2rem;
-        transform: translateY(15%)
     }
 }
 
@@ -99,9 +108,8 @@ section.slider {
 
                 .right-text {
                     text-align: center;
-                    font-size: 28px;
-
                     p {
+                        font-size: 28px;
                         margin: 28px;
                     }
                 }

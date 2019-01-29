@@ -3,7 +3,6 @@
 }
 
 .offer-container{
-    
     .header{
         text-align: center;
         padding: 12rem 0 0 0;
@@ -15,9 +14,9 @@
             &:after{
                 content: "";
                 display: block;
+                background-color: $secondary-color;
                 width: 4em;
                 height: 3px;
-                background-color: $secondary-color;
                 margin: 2rem auto;
             }
         }
@@ -36,7 +35,7 @@
     }
 
     .offer-article{
-        padding-top: 2rem;
+        padding: 4rem 15px;
         margin-bottom: 0.4rem;
         transition: .2s all linear;
         text-align: center;
@@ -170,6 +169,14 @@
 @media(max-width: 1200px){
         .offer-container{.items-height{
             height: auto;
+        }
+    }
+}
+
+@media(max-width: 770px){
+    .offer-container{
+        .offer-article{
+            width: 100%;
         }
     }
 }
