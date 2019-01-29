@@ -10,7 +10,3 @@
     left: 50%;
     transform: translate($x,$y)
 }
-
-@mixin margin($top: 0, $bottom: 0, $left: auto, $right: auto){
-    margin: $top $left $bottom $right;
-}

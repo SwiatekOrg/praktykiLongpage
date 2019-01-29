@@ -1,8 +1,7 @@
 .offer-container{
-   padding: 0;
     .header{
         text-align: center;
-        @include margin(0,6rem,0,0);
+        margin: 12rem 0 6rem 0;
         h2{
             font-size: $headings-fs;
             font-weight: 700;
@@ -12,26 +11,28 @@
                 width: 4em;
                 height: 3px;
                 background-color: $secondary-color;
-                @include margin(2rem,2rem);
+                margin: 2rem auto;
             }
         }
     }
+
+    .heading-of-article{
+        margin-bottom: 1rem;
+        h3{
+            font-size: $h3-fs;
+            display: inline-block;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $secondary-color;
+            white-space: nowrap;
+        }
+    }
+
     .offer-article{
-        @include margin(0,4rem,0,0);
+        margin-bottom: 0.4rem;
         text-align: center;
         i{
             font-size: $icon-fs;
             color: $secondary-color;
-        }
-        .heading-of-article{
-            margin-bottom: 1rem;
-            h3{
-                font-size: $h3-fs;
-                display: inline-block;
-                padding-bottom: 3px;
-                border-bottom: 2px solid $secondary-color;
-                white-space: nowrap;
-            }
         }
         ul{
             display: inline-block;
@@ -40,17 +41,89 @@
             li{
                 font-size: $ul-li-fs;
                 text-align: left;
+                padding-left: 10px;
+                position: relative;
                  &:before{
                      content:""; 
                      height: 6px;
                      width: 6px;
                      background-color: $primary-color;
                      border-radius: 50%;
-                     display: inline-block;
-                     @include margin(0.4rem, 0.4rem, 1rem, 0.4rem);
+                     position: absolute;
+                     left: -5px;
+                     top: 7px;
+                     margin: 0.4rem 1rem 0.4rem 0.4rem;
                  }
 
             }
+        }
+    }
+
+    .items-height{
+        height: 470px;
+        padding-bottom: 2rem;
+
+    }
+
+    .offer-item{
+        text-align: center;
+        margin: 3rem 0;
+        height: 100%;
+        .content{
+            height: 100%;
+            background-color: rgba($color: #ddd, $alpha: 0.6);
+            border-radius: 1rem;
+            box-shadow: 0 20px 50px -23px #15253c;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        i{
+            font-size: 110px;
+            margin: 20px 0 0 0;
+            color: $secondary-color;
+        }
+        a{
+            color: $primary-color;
+            transition: .2s;
+            h3{
+            text-transform: uppercase;
+            font-size: 28px;
+            padding: 0 15px;
+            white-space: normal;
+            }
+            &:hover{
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+        p{
+            font-size: 18px;
+            padding: 5px 15px 20px 15px;
+
+        }
+        .btn{
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #fff;
+            background-color: $secondary-color;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 3px $secondary-color;
+            transition: .1s all linear;
+            &:hover{
+                text-decoration: none;
+                cursor: pointer;
+                color: $secondary-color;
+                background-color: rgba($color: #ddd, $alpha: 0.6);
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px){
+        .offer-container{.items-height{
+            height: auto;
         }
     }
 }

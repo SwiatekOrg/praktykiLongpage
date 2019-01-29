@@ -330,7 +330,7 @@ body {
 }
 
 section.slider {
-  margin-top: var(--nav-height);
+  margin-top: 100px;
   height: 60vh;
   background-color: black;
 }
@@ -341,7 +341,7 @@ section.slider {
 
 .center-box .blue-box {
   max-width: 1100px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   background-color: #15253c;
   color: #fff;
   -webkit-transform: translateY(-10%);
@@ -376,7 +376,6 @@ section.slider {
 
 .company-info {
   background-color: #ddd;
-  margin-bottom: 12rem;
 }
 
 .company-info .info-item {
@@ -431,13 +430,9 @@ section.slider {
   }
 }
 
-.offer-container {
-  padding: 0;
-}
-
 .offer-container .header {
   text-align: center;
-  margin: 0 0 6rem 0;
+  margin: 12rem 0 6rem 0;
 }
 
 .offer-container .header h2 {
@@ -451,29 +446,29 @@ section.slider {
   width: 4em;
   height: 3px;
   background-color: #66b7ac;
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto;
+}
+
+.offer-container .heading-of-article {
+  margin-bottom: 1rem;
+}
+
+.offer-container .heading-of-article h3 {
+  font-size: 42px;
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #66b7ac;
+  white-space: nowrap;
 }
 
 .offer-container .offer-article {
-  margin: 0 0 4rem 0;
+  margin-bottom: 0.4rem;
   text-align: center;
 }
 
 .offer-container .offer-article i {
   font-size: 80px;
   color: #66b7ac;
-}
-
-.offer-container .offer-article .heading-of-article {
-  margin-bottom: 1rem;
-}
-
-.offer-container .offer-article .heading-of-article h3 {
-  font-size: 42px;
-  display: inline-block;
-  padding-bottom: 3px;
-  border-bottom: 2px solid #66b7ac;
-  white-space: nowrap;
 }
 
 .offer-container .offer-article ul {
@@ -485,6 +480,8 @@ section.slider {
 .offer-container .offer-article ul li {
   font-size: 21px;
   text-align: left;
+  padding-left: 10px;
+  position: relative;
 }
 
 .offer-container .offer-article ul li:before {
@@ -493,7 +490,92 @@ section.slider {
   width: 6px;
   background-color: #15253c;
   border-radius: 50%;
-  display: inline-block;
+  position: absolute;
+  left: -5px;
+  top: 7px;
   margin: 0.4rem 1rem 0.4rem 0.4rem;
+}
+
+.offer-container .items-height {
+  height: 470px;
+  padding-bottom: 2rem;
+}
+
+.offer-container .offer-item {
+  text-align: center;
+  margin: 3rem 0;
+  height: 100%;
+}
+
+.offer-container .offer-item .content {
+  height: 100%;
+  background-color: rgba(221, 221, 221, 0.6);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 20px 50px -23px #15253c;
+          box-shadow: 0 20px 50px -23px #15253c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.offer-container .offer-item i {
+  font-size: 110px;
+  margin: 20px 0 0 0;
+  color: #66b7ac;
+}
+
+.offer-container .offer-item a {
+  color: #15253c;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.offer-container .offer-item a h3 {
+  text-transform: uppercase;
+  font-size: 28px;
+  padding: 0 15px;
+  white-space: normal;
+}
+
+.offer-container .offer-item a:hover {
+  text-decoration: none;
+  color: #66b7ac;
+}
+
+.offer-container .offer-item p {
+  font-size: 18px;
+  padding: 5px 15px 20px 15px;
+}
+
+.offer-container .offer-item .btn {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #66b7ac;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 0 3px #66b7ac;
+          box-shadow: 0 0 0 3px #66b7ac;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+}
+
+.offer-container .offer-item .btn:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #66b7ac;
+  background-color: rgba(221, 221, 221, 0.6);
+}
+
+@media (max-width: 1200px) {
+  .offer-container .items-height {
+    height: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

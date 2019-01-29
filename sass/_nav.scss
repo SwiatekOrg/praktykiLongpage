@@ -35,7 +35,7 @@ body {
         width: 50px;
         height: $nav-height;
         position: relative;
-        @include margin(0,0,2rem,auto);
+        margin: 0 2rem 0 auto;
         .hamburger{
             @include centerInBox();
             width: 100%;

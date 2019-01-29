@@ -3,7 +3,7 @@ body{
 }
 
 section.slider {
-    margin-top: var(--nav-height);
+    margin-top: $nav-height;
     height: 60vh;
     background-color: black;
 }
@@ -12,7 +12,7 @@ section.slider {
     margin-bottom: $box-margin-bottom;
     .blue-box {
         max-width: 1100px;
-        @include margin();
+        margin: 0 auto;
         background-color: $primary-color;
         color: #fff;
         transform: translateY($box-translateY);
@@ -41,7 +41,6 @@ section.slider {
 
 .company-info{
     background-color: #ddd;
-    margin-bottom: 12rem;
     .info-item{
         position: relative;
         .content{
