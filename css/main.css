@@ -350,6 +350,12 @@ body {
   background-color: #fff;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 section.slider {
   height: 100vh;
   width: 100%;
@@ -570,7 +576,6 @@ section.slider {
 .offer-container .offer-item {
   text-align: center;
   margin: 30px 0;
-  height: 100%;
 }
 
 .offer-container .offer-item .content {
