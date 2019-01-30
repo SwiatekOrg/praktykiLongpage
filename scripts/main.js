@@ -31,7 +31,11 @@ menu.addEventListener('click',function(){
 // Zmniejszony navbar po zjechaniu oraz resetowanie wlaczonych
 // ficzerow przy przejsciu
 
-document.addEventListener('scroll',function(){
+window.addEventListener('load',changeNav)
+window.addEventListener('scroll',changeNav)
+
+
+function changeNav(){
     if(window.scrollY > 150) nav.classList.add('top')
     else {
         nav.classList.remove('top')
@@ -41,14 +45,14 @@ document.addEventListener('scroll',function(){
         nav.classList.remove('mobile')
         menu.classList.remove('active')
     }
-})
+}
 
 //dodanie klasy dla lepszych marginow przy >1200px
 
 const kafelki = document.querySelector('.tiles')
 
-window.addEventListener('resize', addContainerToTiles)
 window.addEventListener('load',addContainerToTiles)
+window.addEventListener('resize', addContainerToTiles)
 
 function addContainerToTiles(){
     if(window.innerWidth < 1200) kafelki.classList.add('container')
