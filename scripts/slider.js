@@ -23,6 +23,9 @@ function generateItems(){
 
 
 function setAll(){
+    translateX = 0;
+    slider.style.transition = "all 0s linear"
+    slider.style.transform = `translateX(${translateX}px)`
     if(window.innerWidth > 1200) startIcons = 4;
     else if(window.innerWidth > 994) startIcons = 3;
     else if(window.innerWidth > 600) startIcons = 2;
