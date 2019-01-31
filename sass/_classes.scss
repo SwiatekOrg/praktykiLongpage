@@ -22,6 +22,10 @@ body {
   }
 }
 
+.padding-zero{
+  padding: 0;
+}
+
 .flex{
   @include flex(row,wrap);
 }

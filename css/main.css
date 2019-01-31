@@ -21,6 +21,10 @@ body {
   background-color: #fff !important;
 }
 
+.padding-zero {
+  padding: 0;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,10 +776,28 @@ section.slider {
 .offer-container .why-sellwise {
   margin: 10rem 0 15rem 0;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .offer-container .why-sellwise > div {
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .offer-container .why-sellwise h2 {
@@ -786,16 +808,102 @@ section.slider {
   width: 100%;
   max-width: 140px;
   min-width: 120px;
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
 
 .offer-container .why-sellwise h4 {
   font-size: 24px;
   letter-spacing: 0.2rem;
   padding: 2rem 25px;
-  color: #15253c;
+  color: white;
   min-height: 55px;
+}
+
+.div-with-number {
+  background-image: url("../img/offerImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  min-height: 625px;
+  -webkit-box-shadow: 0 0 0 2px white;
+          box-shadow: 0 0 0 2px white;
+}
+
+.div-with-number > div {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  margin-left: 0;
+}
+
+.div-with-number::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 37, 60, 0.3);
+}
+
+.div-with-number .text {
+  text-align: center;
+  padding: 10rem 0;
+}
+
+.div-with-number .text h2 {
+  font-size: 4.3rem;
+  font-weight: 700;
+  padding: 0 15px;
+  color: white;
+  text-shadow: 2px 0px black;
+}
+
+.div-with-number .text h3 {
+  font-size: 7rem;
+  color: white;
+  -webkit-transition: .3s linear all;
+  transition: .3s linear all;
+}
+
+.div-with-number .text h3 i {
+  text-shadow: 2px 0px black, 0px 2px black;
+  -webkit-animation: phone 1.5s linear infinite alternate;
+          animation: phone 1.5s linear infinite alternate;
+  margin: 2rem 0;
+}
+
+.div-with-number .text h4 {
+  display: block;
+  text-shadow: 2px 0px black;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: 6rem;
+  position: relative;
+  color: white;
+  white-space: nowrap;
+}
+
+.div-with-number .text h4:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.div-with-number .text h4:before, .div-with-number .text h4:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  display: block;
+  background-color: white;
+  top: calc(50% - 1px);
+  left: calc(50% - 220px);
+}
+
+.div-with-number .text h4:after {
+  left: unset;
+  right: calc(50% - 220px);
 }
 
 @media (min-width: 1500px) {
@@ -804,15 +912,111 @@ section.slider {
   }
 }
 
-@media (max-width: 1200px) {
-  .offer-container .items-height {
-    height: auto;
+@media (max-width: 430px) {
+  .div-with-number .text h2 {
+    font-size: 3.5rem;
+  }
+  .div-with-number .text h4 {
+    font-size: 4rem;
+  }
+  .div-with-number .text h4::before {
+    left: calc(50% - 170px);
+  }
+  .div-with-number .text h4::after {
+    right: calc(50% - 170px);
   }
 }
 
-@media (max-width: 770px) {
+@media (width: 766px) {
+  .offer-container .why-sellwise > div {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (width: 767px) {
+  .offer-container .why-sellwise > div {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (max-width: 765px) {
   .offer-container .offer-article {
     width: 100%;
+  }
+  .offer-container .why-sellwise {
+    display: block;
+  }
+}
+
+@-webkit-keyframes phone {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    text-shadow: 2px 0px black, 0px 2px black;
+  }
+  40% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    text-shadow: 2px 0px black, 0px 2px black;
+  }
+  52% {
+    -webkit-transform: rotate(0deg) scale(1.1);
+            transform: rotate(0deg) scale(1.1);
+    text-shadow: 1px 0px black, 0px 1px black;
+  }
+  64% {
+    -webkit-transform: rotate(15deg) scale(1.1);
+            transform: rotate(15deg) scale(1.1);
+  }
+  76% {
+    -webkit-transform: rotate(-15deg) scale(1.1);
+            transform: rotate(-15deg) scale(1.1);
+  }
+  88% {
+    -webkit-transform: rotate(15deg) scale(1.1);
+            transform: rotate(15deg) scale(1.1);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg) scale(1.1);
+            transform: rotate(-15deg) scale(1.1);
+    text-shadow: 1px 0px black, 0px 1px black;
+  }
+}
+
+@keyframes phone {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    text-shadow: 2px 0px black, 0px 2px black;
+  }
+  40% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+    text-shadow: 2px 0px black, 0px 2px black;
+  }
+  52% {
+    -webkit-transform: rotate(0deg) scale(1.1);
+            transform: rotate(0deg) scale(1.1);
+    text-shadow: 1px 0px black, 0px 1px black;
+  }
+  64% {
+    -webkit-transform: rotate(15deg) scale(1.1);
+            transform: rotate(15deg) scale(1.1);
+  }
+  76% {
+    -webkit-transform: rotate(-15deg) scale(1.1);
+            transform: rotate(-15deg) scale(1.1);
+  }
+  88% {
+    -webkit-transform: rotate(15deg) scale(1.1);
+            transform: rotate(15deg) scale(1.1);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg) scale(1.1);
+            transform: rotate(-15deg) scale(1.1);
+    text-shadow: 1px 0px black, 0px 1px black;
   }
 }
 /*# sourceMappingURL=main.css.map */
