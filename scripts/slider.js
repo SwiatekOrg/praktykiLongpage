@@ -2,25 +2,43 @@ const slider = document.querySelector('.slider')
 // Klasy dodawane do kolejnych slide'ów
 const listOfItems = ['fa-apple','fa-book','fa-bug','fa-calendar','fa-camera','fa-ban'] 
 // Pobranie wsyzstkich sladjów 
-const listOfSlider = [...slider.querySelectorAll('.sliderItem')]
+let listOfSlider = [...slider.querySelectorAll('.sliderItem')]
 // Ilosc musi byc mniejsza od liczby itemow
-const startIcons = 4
-const widthOfItem = slider.parentElement.offsetWidth/startIcons
+let startIcons = 3
+let widthOfItem;
 let translateX = 0
 let counter = 0
 
-// Skopiowanie wszystkich itemow jeszcze raz 
-listOfSlider.forEach((item,i)=>{
-    item.style.width = `${widthOfItem}px`
-    item.firstChild.classList.add(`${listOfItems[i]}`)
-    slider.appendChild(item.cloneNode(true))
-})
+function generateItems(){
+    // Skopiowanie wszystkich itemow jeszcze raz 
+    listOfSlider.forEach((item,i)=>{
+        item.style.width = `${widthOfItem}px`
+        item.firstChild.classList.add(`${listOfItems[i]}`)
+        slider.appendChild(item.cloneNode(true))
+    })
+    // Na wypadek gdyby liczba itemow byla rowna widocznym na poczatku
+    slider.appendChild(listOfSlider[0].cloneNode(true))
+    //const newListOfSlider = [...slider.querySelectorAll('.sliderItem')]
+}
 
-// Na wypadek gdyby liczba itemow byla rowna widocznym na poczatku
-slider.appendChild(listOfSlider[0].cloneNode(true))
 
-// Ustawienie szerokosci slajdera
-slider.style.width = `${widthOfItem * 2 * listOfSlider.length + widthOfItem}px`
+function setAll(){
+    if(window.innerWidth > 1200) startIcons = 4;
+    else if(window.innerWidth > 994) startIcons = 3;
+    else if(window.innerWidth > 600) startIcons = 2;
+    else startIcons = 1;
+    const newListOfSlider = [...slider.querySelectorAll('.sliderItem')]
+    // Ustawienie szerokosci slajdu
+    widthOfItem = slider.parentElement.offsetWidth/startIcons
+    slider.style.width = `${widthOfItem * 2 * listOfSlider.length + widthOfItem}px`
+    // Wygenerowanie itemow jeszcze raz
+    newListOfSlider.forEach((item,i)=>{
+        item.style.width = `${widthOfItem}px`
+        //item.firstChild.classList.add(`${listOfItems[i]}`)
+        //slider.appendChild(item.cloneNode(true))
+    })
+    //ustawienie szerokosci slajdera
+}
 
 function sliderRoll(){
     if(counter === listOfSlider.length){
@@ -35,10 +53,8 @@ function sliderRoll(){
     slider.style.transition = 'all 1s linear'
 }
 
+setTimeout(generateItems,0)
+setTimeout(setAll,0)
+window.addEventListener('resize',setAll)
 
-setTimeout(()=>console.log('XD'),0)
-window.addEventListener('resize',function(){
-
-})
-
-setInterval(sliderRoll,3000);
+setInterval(sliderRoll,1500);

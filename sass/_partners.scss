@@ -3,6 +3,7 @@
         margin-bottom: 0 !important;
         h2{
             color: $primary-color;
+            word-break: break-all;
             &::after{
                 background-color: $secondary-color;
             }

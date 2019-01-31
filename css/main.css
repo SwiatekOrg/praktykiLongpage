@@ -1024,6 +1024,7 @@ section.sliderIMG {
 
 .partners .header h2 {
   color: #15253c;
+  word-break: break-all;
 }
 
 .partners .header h2::after {
