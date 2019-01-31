@@ -13,6 +13,14 @@ body {
   background-color: #fff;
 }
 
+.colorBlack h2 {
+  color: #15253c !important;
+}
+
+.colorBlack h2::after {
+  background-color: #fff !important;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,8 +299,6 @@ body {
   height: 80px;
   width: 350px;
   background-color: #fff;
-  -webkit-transition: .3s linear all;
-  transition: .3s linear all;
   z-index: 1;
 }
 
@@ -346,6 +352,15 @@ body {
   .nav-all .nav-list {
     display: none;
   }
+}
+
+@media (max-width: 1260px) and (max-width: 500px) {
+  .nav-all .nav-header-img header {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 1260px) {
   .nav-all .menu-hamburger {
     display: block;
   }
@@ -399,12 +414,12 @@ body {
             transform: scale(1.1) translate(-45%, -50%);
   }
   .mobile .nav-list .nav-search-icon {
-    display: none;
+    display: none !important;
   }
-}
-
-.nav-all.mobile + .search-window.activeMobile {
-  top: 390px;
+  .nav-all.mobile + .search-window.activeMobile {
+    right: 0;
+    top: 570px;
+  }
 }
 
 section.slider {
@@ -638,7 +653,7 @@ section.slider {
 }
 
 .offer-container .tiles {
-  margin: 3rem auto;
+  margin: 6rem auto;
 }
 
 .offer-container .offer-item {
@@ -671,13 +686,19 @@ section.slider {
 }
 
 .offer-container .offer-item .content:hover a h3 {
-  -webkit-transform: scale(1.2) translateY(-10%);
-          transform: scale(1.2) translateY(-10%);
+  -webkit-transform: scale(0.95) translateY(5%);
+          transform: scale(0.95) translateY(5%);
+}
+
+.offer-container .offer-item .content:hover a:hover {
+  -webkit-transform: scale(1.1) translateY(0%);
+          transform: scale(1.1) translateY(0%);
+  text-decoration: none;
 }
 
 .offer-container .offer-item .content:hover i {
-  -webkit-transform: scale(0.9) translateY(20%);
-          transform: scale(0.9) translateY(20%);
+  -webkit-transform: scale(1.1) translateY(15%);
+          transform: scale(1.1) translateY(15%);
 }
 
 .offer-container .offer-item .content:hover .btn {
@@ -688,6 +709,7 @@ section.slider {
 .offer-container .offer-item .content:hover .btn:hover {
   -webkit-transform: scale(1.1) translateY(-20%);
           transform: scale(1.1) translateY(-20%);
+  text-decoration: none;
 }
 
 .offer-container .offer-item .content i {
@@ -748,19 +770,32 @@ section.slider {
 }
 
 .offer-container .why-sellwise {
-  margin-bottom: 15rem;
+  margin: 10rem 0 15rem 0;
   text-align: center;
 }
 
-.offer-container .why-sellwise i {
-  font-size: 80px;
+.offer-container .why-sellwise > div {
+  margin-bottom: 30px;
+}
+
+.offer-container .why-sellwise h2 {
   color: #15253c;
-  margin: 1.2rem 0;
+}
+
+.offer-container .why-sellwise img {
+  width: 100%;
+  max-width: 140px;
+  min-width: 120px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .offer-container .why-sellwise h4 {
-  font-size: 21px;
+  font-size: 24px;
   letter-spacing: 0.2rem;
+  padding: 2rem 25px;
+  color: #15253c;
+  min-height: 55px;
 }
 
 @media (min-width: 1500px) {

@@ -191,7 +191,7 @@
     height: 80px;
     width: $search-window-width;
     background-color: #fff;
-    transition: .3s linear all;
+    //transition: .3s linear all;
     z-index: 1;
     &.active {
         right: 0;
@@ -237,6 +237,16 @@
     display: none;
 }
 
+@media(max-width: 500px){
+    .nav-all{
+        .nav-header-img{
+            header{
+                padding: 28px;
+            }
+        }
+    }
+}
+
 .nav-all .menu-hamburger{
     display: block;
 }
@@ -274,13 +284,12 @@
             }
             }
             .nav-search-icon{
-                display: none;
+                display: none !important;
             }
         }
     }
-}
-
-
-.nav-all.mobile+.search-window.activeMobile{
-    top: 390px;
+    .nav-all.mobile+.search-window.activeMobile{
+        right: 0;
+        top:570px;
+    }
 }

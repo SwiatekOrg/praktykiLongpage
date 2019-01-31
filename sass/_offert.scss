@@ -101,7 +101,7 @@
         }
     }
     .tiles{
-        margin: 3rem auto;
+        margin: 6rem auto;
     }
     .offer-item{
         text-align: center;
@@ -119,16 +119,21 @@
                 background-color: rgba($color: #ddd, $alpha: 0.25);
                 a{
                     h3{
-                        transform: scale(1.2) translateY(-10%)
+                        transform: scale(0.95) translateY(5%)
+                    }
+                    &:hover{
+                        transform: scale(1.1) translateY(0%);
+                        text-decoration: none;
                     }
                 }
                 i{
-                    transform: scale(0.9) translateY(20%)
+                    transform: scale(1.1) translateY(15%)
                 }
                 .btn{
                     transform: translateY(-20%);
                     &:hover{
                         transform: scale(1.1) translateY(-20%);
+                        text-decoration: none;
                     }
                 }
             }
@@ -180,16 +185,26 @@
         }
     }
     .why-sellwise{
-        margin-bottom: 15rem;
+        margin: 10rem 0 15rem 0;
         text-align: center;
-        i{
-            font-size: 80px;
+        >div{
+            margin-bottom: 30px;
+        }
+        h2{
             color: $primary-color;
-            margin: 1.2rem 0;
+        }
+        img{
+            width:100%;
+            max-width: 140px;
+            min-width: 120px;
+            filter: invert(1)
         }
         h4{
-            font-size: 21px;
+            font-size: 24px;
             letter-spacing: 0.2rem;
+            padding: 2rem 25px;
+            color: $primary-color;
+            min-height: 55px;
         }
     }
 }
@@ -204,6 +219,21 @@
         }
     }
 }
+
+
+// @media(min-width: 1200px){
+//     .offer-container{
+//         .why-sellwise{
+//             display: flex;
+//             >div{
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 justify-content: space-between;
+//             }
+//         }
+//     }
+// }
 
 @media(max-width: 1200px){
         .offer-container{.items-height{
