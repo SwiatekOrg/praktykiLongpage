@@ -179,17 +179,16 @@
         }
         img{
             width:100%;
-            max-width: 140px;
-            min-width: 120px;
-            //filter: invert(1)
+            max-width: 90px;
+            filter: invert(1);
             padding-bottom: 40px;
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid #e9d9c2;
         }
         h4{
             font-size: 24px;
             letter-spacing: 0.2rem;
             padding: 2rem 25px;
-            color: white; //$primary-color;
+            color: $primary-color;
             min-height: 55px;
         }
     }

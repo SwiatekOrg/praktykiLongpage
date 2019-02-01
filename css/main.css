@@ -411,6 +411,19 @@ section.sliderIMG {
   border-radius: 50%;
   padding: 2.5rem;
   overflow: hidden;
+  -webkit-transition: .15s linear all;
+  transition: .15s linear all;
+}
+
+.company-info .info-item .content .circle:hover {
+  border-color: #15253c;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  padding: 2rem;
+}
+
+.company-info .info-item .content .circle:hover i {
+  color: #66b7ac;
 }
 
 .company-info .info-item .content i {
@@ -694,17 +707,18 @@ section.sliderIMG {
 
 .offer-container .why-sellwise img {
   width: 100%;
-  max-width: 140px;
-  min-width: 120px;
+  max-width: 90px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
   padding-bottom: 40px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #e9d9c2;
 }
 
 .offer-container .why-sellwise h4 {
   font-size: 24px;
   letter-spacing: 0.2rem;
   padding: 2rem 25px;
-  color: white;
+  color: #15253c;
   min-height: 55px;
 }
 

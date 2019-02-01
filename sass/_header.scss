@@ -57,6 +57,16 @@ section.sliderIMG {
                 border-radius: 50%;
                 padding: 2.5rem;
                 overflow: hidden;
+                transition: .15s linear all;
+                &:hover{
+                    //border: none;
+                    border-color: $primary-color;
+                    transform: translateY(15px);
+                    padding: 2rem;
+                    i{
+                        color: $secondary-color;
+                    }
+                }
             }
             i{
                 font-size: 8rem;
