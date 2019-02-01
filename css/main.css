@@ -717,6 +717,7 @@ section.sliderIMG {
   min-height: 625px;
   -webkit-box-shadow: 0 0 0 2px white;
           box-shadow: 0 0 0 2px white;
+  overflow: hidden;
 }
 
 .div-with-number > div {
@@ -772,7 +773,6 @@ section.sliderIMG {
   font-size: 6rem;
   position: relative;
   color: white;
-  white-space: nowrap;
 }
 
 .div-with-number .text h4 > div {
@@ -814,10 +814,10 @@ section.sliderIMG {
   .div-with-number .text h4 {
     font-size: 4rem;
   }
-  .div-with-number .text h4::before {
+  .div-with-number .text h4 div::before {
     left: calc(50% - 170px);
   }
-  .div-with-number .text h4::after {
+  .div-with-number .text h4 div::after {
     right: calc(50% - 170px);
   }
 }
@@ -1188,6 +1188,9 @@ section.sliderIMG {
   }
   .contact .dane {
     text-align: center;
+  }
+  .contact .dane .info {
+    margin-top: 50px;
   }
 }
 

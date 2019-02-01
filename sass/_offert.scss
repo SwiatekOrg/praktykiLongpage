@@ -203,6 +203,7 @@
     position: relative;
     min-height: 625px;
     box-shadow: 0 0 0 2px white;
+    overflow: hidden;
     >div{
         position: absolute;
         width: 100%;
@@ -246,7 +247,7 @@
             font-size: 6rem;
             position: relative;
             color: white;
-            white-space: nowrap;
+            //white-space: nowrap;
             >div{
                 transition: .1s linear all;
                 &:hover{
@@ -290,11 +291,13 @@
             }
             h4{
                 font-size: 4rem;
-                &::before{
-                    left: calc(50% - 170px)
-                }
-                &::after{
-                    right: calc(50% - 170px);
+                div{
+                    &::before{
+                        left: calc(50% - 170px)
+                    }
+                    &::after{
+                        right: calc(50% - 170px);
+                    }
                 }
             }
         }
