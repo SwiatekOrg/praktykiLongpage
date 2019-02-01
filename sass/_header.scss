@@ -73,18 +73,6 @@ section.sliderIMG {
     }
 }
 
-// prostokat na slider
-
-.box-with-reference{
-    margin-top: 6rem;
-    .content{
-        height: 30rem; // tymczasowo
-        background-color: $primary-color;
-        transform: translateY(15%);
-        border-radius: 2rem;
-    }
-}
-
 @media(max-width: 1225px) {
     .center-box {
         .blue-box {

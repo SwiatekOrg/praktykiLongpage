@@ -1,4 +1,5 @@
 .partners{
+    overflow: hidden;
     .header{
         margin-bottom: 0 !important;
         h2{
@@ -15,9 +16,8 @@
         .slider{
             display: flex;
             justify-content: flex-start;
-            //transition: .5s linear all;
             .sliderItem{
-                font-size: 80px;
+                font-size: 100px;
                 text-align: center;
                 height: 100px;
                 line-height: 100px;
@@ -53,6 +53,9 @@
                 
             }
             footer{
+                &::before{
+                    content: none;
+                }
                 text-align: right;
                 display: flex;
                 flex-direction: column;

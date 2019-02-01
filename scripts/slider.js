@@ -1,6 +1,6 @@
 const slider = document.querySelector('.slider')
 // Klasy dodawane do kolejnych slide'ów
-const listOfItems = ['fa-apple','fa-book','fa-bug','fa-calendar','fa-camera','fa-ban'] 
+const listOfItems = ["icon-html5-alt",'icon-css3-alt','icon-javascript-alt','icon-sass','icon-bootstrap','icon-jquery','icon-shell'] 
 // Pobranie wsyzstkich sladjów 
 let listOfSlider = [...slider.querySelectorAll('.sliderItem')]
 // Ilosc musi byc mniejsza od liczby itemow

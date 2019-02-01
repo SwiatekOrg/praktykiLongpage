@@ -239,14 +239,16 @@
                 margin: 2rem 0;
             }
         }
-            h4{
-                display: block;
-                text-shadow: 2px 0px black;
-                transition: .2s;
-                font-size: 6rem;
-                position: relative;
-                color: white;
-                white-space: nowrap;
+        h4{
+            display: block;
+            text-shadow: 2px 0px black;
+            transition: .2s;
+            font-size: 6rem;
+            position: relative;
+            color: white;
+            white-space: nowrap;
+            >div{
+                transition: .1s linear all;
                 &:hover{
                     transform: scale(1.2);
                 }
@@ -263,7 +265,7 @@
                 &:after{
                     left: unset;
                     right: calc(50% - 220px);
-                    
+                }
                 
             }
         }
