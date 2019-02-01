@@ -266,6 +266,12 @@
                     left: unset;
                     right: calc(50% - 220px);
                 }
+                a{
+                    color: white;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
                 
             }
         }
