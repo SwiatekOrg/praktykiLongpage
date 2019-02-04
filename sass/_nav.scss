@@ -26,14 +26,6 @@
                     }
                 }
             }
-            // .nav-search-icon{
-            //     display: block;
-            //     a{
-            //         i{
-            //             line-height: 75px;
-            //         }
-            //     }
-            // }
         }
         .menu-hamburger{
             height: 75px;
@@ -47,7 +39,7 @@
         width: 300px;
         header {
             height: 100%;
-            padding: 22px;
+            padding: 25px 25px 25px 15px;
             img {
                 height: 100%;
                 width: auto;
@@ -159,139 +151,51 @@
                 }
             }
         }
-
-        // .nav-search-icon {
-        //     display: none;
-        //     width: 90px;
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     a {
-        //         margin: 0 40px;
-        //         color: $nav-a-color;
-        //         height: 100%;
-        //         width: 100%;
-
-        //         i {
-        //             line-height: $nav-height;
-        //             width: 40px;
-        //             font-size: 30px;
-        //             transition: .1s;
-        //             &:hover {
-        //                 color: $nav-a-hover-color;
-        //                 transform: scale(1.2)
-        //             }
-        //         }
-        //     }
-        // }
     }
 }
-
-// .search-window {
-//     position: fixed;
-//     top: 75px;
-//     right: -$search-window-width;
-//     height: 80px;
-//     width: $search-window-width;
-//     background-color: #fff;
-//     z-index: 1;
-//     &.active {
-//         right: 0;
-//     }
-
-//     div {
-//         width: 100%;
-//         @include centerInBox();
-//         input {
-//             box-sizing: content-box;
-//             width: 65%;
-//             height: 45px;
-//             font-size: 30px;
-//             margin-left: 35px;
-//             border: none;
-//             &:focus {
-//                 outline: none;
-//             }
-
-//         }
-
-//         button {
-//             border: none;
-//             background-color: #fff;
-//             font-size: 34px;
-//             padding-left: 30px;
-//             overflow: hidden;
-//             transition: 0.1s all linear;
-//             &:focus {
-//                 outline: none;
-//             }
-
-//             &:hover {
-//                 transform: scale(1.2)
-//             }
-//         }
-//     }
-// }
-
 
 @media(max-width: 1260px){
-.nav-all .nav-list{
-    display: none;
-}
-
-@media(max-width: 500px){
-    .nav-all{
-        .nav-header-img{
-            header{
-                padding: 28px;
-            }
-        }
+    .nav-all .nav-list{
+        display: none;
     }
-}
 
-.nav-all .menu-hamburger{
-    display: block;
-}
 
-.mobile{
-    .nav-list{
-        @include flex(column);
-        position: fixed;
-        top: 100px;
-        left: 0;
-        margin: 0;
-        width: 100%;
-        background-color: $primary-color;
-        nav{
-            ol{
-                flex-direction: column;
-                li{
-                    text-align: center;
-                    a{
-                        line-height: 40px;
-                        padding: 0;
-                    }
-                    &:last-child{
-                        position: relative;
-                        height: 40px;
+    .nav-all .menu-hamburger{
+        display: block;
+    }
+
+    .mobile{
+        .nav-list{
+            @include flex(column);
+            position: fixed;
+            top: 100px;
+            left: 0;
+            margin: 0;
+            width: 100%;
+            background-color: $primary-color;
+            nav{
+                ol{
+                    flex-direction: column;
+                    li{
+                        text-align: center;
                         a{
-                            @include centerInBox();
-                            margin: 0;
-                            &:hover{
-                                transform: scale(1.1) translate(-45%,-50%);
+                            line-height: 40px;
+                            padding: 0;
+                        }
+                        &:last-child{
+                            position: relative;
+                            height: 40px;
+                            a{
+                                @include centerInBox();
+                                margin: 0;
+                                &:hover{
+                                    transform: scale(1.1) translate(-45%,-50%);
+                                }
                             }
                         }
                     }
                 }
             }
-            }
-            // .nav-search-icon{
-            //     display: none !important;
-            // }
         }
     }
-//     .nav-all.mobile+.search-window.activeMobile{
-//         right: 0;
-//         top:570px;
-//     }
 }

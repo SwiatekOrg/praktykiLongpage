@@ -2,7 +2,7 @@
 const noReveal = {
     reset: true,
 }
-      
+
 const sr = new ScrollReveal(noReveal);
 sr.reveal('.animation', {
     beforeReveal: function (el) {
