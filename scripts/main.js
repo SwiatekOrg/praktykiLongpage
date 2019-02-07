@@ -28,3 +28,18 @@ function addContainerToTiles(){
     if(window.innerWidth < 1200) kafelki.classList.add('container')
     else kafelki.classList.remove('container')
   }
+
+// Pop up z numerem
+
+const pop = document.querySelector('.pop-number')
+const closeBtn = document.querySelector('.close')
+
+closeBtn.addEventListener('click',()=>{
+    pop.classList.remove('active')
+})
+
+const popup =()=>{
+    pop.classList.add('active')
+}
+
+setTimeout(popup,5000)
