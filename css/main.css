@@ -124,7 +124,7 @@ body {
 
 .nav-all .nav-header-img header {
   height: 100%;
-  padding: 22px;
+  padding: 25px 25px 25px 15px;
 }
 
 .nav-all .nav-header-img header img {
@@ -288,15 +288,6 @@ body {
   .nav-all .nav-list {
     display: none;
   }
-}
-
-@media (max-width: 1260px) and (max-width: 500px) {
-  .nav-all .nav-header-img header {
-    padding: 28px;
-  }
-}
-
-@media (max-width: 1260px) {
   .nav-all .menu-hamburger {
     display: block;
   }
@@ -485,6 +476,7 @@ section.sliderIMG {
 }
 
 .offer-container .offer-article {
+  overflow: hidden;
   padding: 4rem 15px;
   margin-bottom: 0.4rem;
   -webkit-transition: .2s all linear;
