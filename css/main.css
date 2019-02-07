@@ -465,6 +465,10 @@ section.sliderIMG {
   }
 }
 
+.offer-container {
+  counter-reset: section;
+}
+
 .offer-container .heading-of-article {
   margin-bottom: 1rem;
 }
@@ -555,6 +559,51 @@ section.sliderIMG {
   left: -0;
   top: 7px;
   margin: 0.4rem;
+}
+
+.offer-container .work {
+  position: relative;
+  border-bottom: 3px solid #bbb;
+  padding-bottom: 5rem;
+}
+
+.offer-container .work .work-item {
+  padding: 3rem 0 5rem 0;
+  text-align: center;
+  color: #bbb;
+  font-size: 3rem;
+}
+
+.offer-container .work .work-item i {
+  font-size: 8rem;
+  margin: 4rem 0;
+  color: #66b7ac;
+}
+
+.offer-container .work:hover {
+  background-color: rgba(135, 135, 135, 0.3);
+}
+
+.offer-container .work:hover .work-item {
+  color: white;
+}
+
+.offer-container .work::after {
+  content: counter(section);
+  color: white;
+  font-size: 3rem;
+  line-height: 50px;
+  text-align: center;
+  counter-increment: section;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #66b7ac;
 }
 
 .offer-container .tiles {
@@ -858,12 +907,15 @@ section.sliderIMG {
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 767px) {
   .offer-container .offer-article {
     width: 100%;
   }
   .offer-container .why-sellwise {
     display: block;
+  }
+  .offer-container .work {
+    width: 100%;
   }
 }
 
@@ -871,17 +923,14 @@ section.sliderIMG {
   0% {
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
-    text-shadow: 2px 0px black, 0px 2px black;
   }
   40% {
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
-    text-shadow: 2px 0px black, 0px 2px black;
   }
   52% {
     -webkit-transform: rotate(0deg) scale(1.1);
             transform: rotate(0deg) scale(1.1);
-    text-shadow: 1px 0px black, 0px 1px black;
   }
   64% {
     -webkit-transform: rotate(15deg) scale(1.1);
@@ -898,7 +947,6 @@ section.sliderIMG {
   100% {
     -webkit-transform: rotate(-15deg) scale(1.1);
             transform: rotate(-15deg) scale(1.1);
-    text-shadow: 1px 0px black, 0px 1px black;
   }
 }
 
@@ -906,17 +954,14 @@ section.sliderIMG {
   0% {
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
-    text-shadow: 2px 0px black, 0px 2px black;
   }
   40% {
     -webkit-transform: rotate(0deg) scale(1);
             transform: rotate(0deg) scale(1);
-    text-shadow: 2px 0px black, 0px 2px black;
   }
   52% {
     -webkit-transform: rotate(0deg) scale(1.1);
             transform: rotate(0deg) scale(1.1);
-    text-shadow: 1px 0px black, 0px 1px black;
   }
   64% {
     -webkit-transform: rotate(15deg) scale(1.1);
@@ -933,7 +978,6 @@ section.sliderIMG {
   100% {
     -webkit-transform: rotate(-15deg) scale(1.1);
             transform: rotate(-15deg) scale(1.1);
-    text-shadow: 1px 0px black, 0px 1px black;
   }
 }
 
@@ -1214,6 +1258,80 @@ section.sliderIMG {
   .contact .dane .info {
     margin-top: 50px;
   }
+}
+
+.pop-number.active {
+  display: block;
+}
+
+.pop-number {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-number .window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
+  padding: 4rem;
+}
+
+.pop-number .window .close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 4rem;
+}
+
+.pop-number .window h3 {
+  margin: 1.2rem 0 3.5rem 0;
+  font-size: 3rem;
+}
+
+.pop-number .window h3::after {
+  content: '';
+  display: block;
+  width: 50%;
+  margin: 15px auto 0px auto;
+  height: 2px;
+  background-color: #66b7ac;
+}
+
+.pop-number .window input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 12px;
+  margin-right: 5px;
+}
+
+.pop-number .window button {
+  background-color: #15253c;
+  color: white;
+  border: none;
+  padding: 5px 21px;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-transition: .3s linear all;
+  transition: .3s linear all;
+}
+
+.pop-number .window button:hover {
+  background-color: #fff;
+  color: #15253c;
+  -webkit-box-shadow: 0 0 0 2px #15253c;
+          box-shadow: 0 0 0 2px #15253c;
 }
 
 footer {

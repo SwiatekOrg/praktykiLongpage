@@ -77,6 +77,46 @@
             }
         }
     }
+    counter-reset: section;
+    .work{
+        position: relative;
+        border-bottom: 3px solid #bbb;
+        padding-bottom: 5rem;
+        .work-item{
+            padding: 3rem 0 5rem 0;
+            text-align: center;
+            color: #bbb;
+            font-size: 3rem;
+            i{
+                font-size: 8rem;
+                margin: 4rem 0;
+                color: $secondary-color;
+            }
+        }
+        &:hover{
+            background-color: rgba(135,135,135,0.3);
+            .work-item{
+                color: white;
+                
+            }
+        }
+        &::after{
+            content: counter(section);
+            color: white;
+            font-size: 3rem;
+            line-height: 50px;
+            text-align: center;
+            counter-increment: section;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%,50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color:$secondary-color;
+        }
+    }
     .tiles{
         margin: 6rem auto;
     }
@@ -330,13 +370,16 @@
 }
 
 
-@media(max-width: 765px){
+@media(max-width: 767px){
     .offer-container{
         .offer-article{
             width: 100%;
         }
         .why-sellwise{
             display: block;
+        }
+        .work{
+            width: 100%;
         }
     }
 }
@@ -345,15 +388,12 @@
 @keyframes phone{
     0%{
         transform: rotate(0deg) scale(1);
-        text-shadow: 2px 0px black, 0px 2px black;
     }
     40%{
         transform: rotate(0deg) scale(1);
-        text-shadow: 2px 0px black, 0px 2px black;
     }
     52%{
         transform: rotate(0deg) scale(1.1);
-        text-shadow: 1px 0px black, 0px 1px black;
     }
     64%{
         transform: rotate(15deg) scale(1.1)
@@ -366,6 +406,5 @@
     }
     100%{
         transform: rotate(-15deg) scale(1.1);
-        text-shadow: 1px 0px black, 0px 1px black;
     }
 }
