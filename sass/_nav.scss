@@ -5,12 +5,13 @@
     height: $nav-height;
     transition: all .9s linear;
     &.top{
-        height: 75px;
+        height: 60px;
         background-color: $primary-color;
         .nav-list{
-            top: 75px;
+            top: 60px;
         }
         .nav-header-img{
+            width: 150px;
             header{
                 padding: 20px;
             }
@@ -20,7 +21,7 @@
                 ol{
                     li{
                         a{
-                            line-height: 75px;
+                            line-height: 60px;
                             padding: 0 25px;
                         }
                     }
@@ -28,7 +29,7 @@
             }
         }
         .menu-hamburger{
-            height: 75px;
+            height: 60px;
         }
     }
     width: 100%;
@@ -106,6 +107,7 @@
                 list-style: none;
                 font-weight: 700;
                 padding-left: 0;
+                padding-right: 150px;
                 white-space: nowrap;
 
                 li {
@@ -165,8 +167,10 @@
     }
 
     .mobile{
+        
         .nav-list{
             @include flex(column);
+            border-bottom: 3px solid $secondary-color;
             position: fixed;
             top: 100px;
             left: 0;

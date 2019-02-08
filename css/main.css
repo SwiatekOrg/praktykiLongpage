@@ -97,12 +97,16 @@ body {
 }
 
 .nav-all.top {
-  height: 75px;
+  height: 60px;
   background-color: #15253c;
 }
 
 .nav-all.top .nav-list {
-  top: 75px;
+  top: 60px;
+}
+
+.nav-all.top .nav-header-img {
+  width: 150px;
 }
 
 .nav-all.top .nav-header-img header {
@@ -110,12 +114,12 @@ body {
 }
 
 .nav-all.top .nav-list nav ol li a {
-  line-height: 75px;
+  line-height: 60px;
   padding: 0 25px;
 }
 
 .nav-all.top .menu-hamburger {
-  height: 75px;
+  height: 60px;
 }
 
 .nav-all .nav-header-img {
@@ -230,6 +234,7 @@ body {
   list-style: none;
   font-weight: 700;
   padding-left: 0;
+  padding-right: 150px;
   white-space: nowrap;
 }
 
@@ -304,6 +309,7 @@ body {
             justify-content: unset;
     -ms-flex-line-pack: unset;
         align-content: unset;
+    border-bottom: 3px solid #66b7ac;
     position: fixed;
     top: 100px;
     left: 0;
@@ -408,9 +414,8 @@ section.sliderIMG {
 
 .company-info .info-item .content .circle:hover {
   border-color: #15253c;
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
-  padding: 2rem;
+  -webkit-transform: translateY(15px) scale(0.95);
+          transform: translateY(15px) scale(0.95);
 }
 
 .company-info .info-item .content .circle:hover i {
@@ -559,6 +564,10 @@ section.sliderIMG {
   padding-bottom: 5rem;
 }
 
+.offer-container .work:nth-child(1), .offer-container .work:nth-child(2) {
+  z-index: 10;
+}
+
 .offer-container .work .work-item {
   padding: 3rem 0 5rem 0;
   text-align: center;
@@ -580,8 +589,13 @@ section.sliderIMG {
   color: white;
 }
 
+.offer-container .work:hover .work-item i {
+  color: #8cffef;
+}
+
 .offer-container .work::after {
   content: counter(section);
+  z-index: 2;
   color: white;
   font-size: 3rem;
   line-height: 50px;
@@ -726,6 +740,7 @@ section.sliderIMG {
 }
 
 .offer-container .why-sellwise > div {
+  position: relative;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,6 +755,19 @@ section.sliderIMG {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.offer-container .why-sellwise > div:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  padding: 18px 0 30px 0;
+  border-bottom: 2px solid #66b7ac;
 }
 
 .offer-container .why-sellwise h2 {
@@ -747,12 +775,17 @@ section.sliderIMG {
 }
 
 .offer-container .why-sellwise img {
+  -webkit-transition: .3s all linear;
+  transition: .3s all linear;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   width: 100%;
   max-width: 90px;
   -webkit-filter: invert(1);
           filter: invert(1);
-  padding-bottom: 40px;
-  border-bottom: 2px solid #e9d9c2;
+  padding-bottom: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .offer-container .why-sellwise h4 {
@@ -765,6 +798,7 @@ section.sliderIMG {
 
 .div-with-number {
   background-image: url("../img/offerImg.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -1150,20 +1184,19 @@ section.sliderIMG {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0 10px 10px 0;
-  padding: 3px 5px;
+  padding: 8px 15px;
   color: black;
 }
 
 .contact form textarea {
   width: calc(100% - 10px);
-  padding: 5px;
   color: black;
+  padding: 8px 15px;
 }
 
 .contact form p {
   position: relative;
   font-size: 13px;
-  padding: 8px 0 8px 0;
   line-height: 25px;
   margin-left: 20px;
   font-weight: 700;
@@ -1252,6 +1285,12 @@ section.sliderIMG {
   }
 }
 
+@media (max-width: 991px) {
+  .contact form button {
+    margin: 0 auto;
+  }
+}
+
 .pop-number.active {
   display: block;
 }
@@ -1302,7 +1341,8 @@ section.sliderIMG {
 .pop-number .window input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: none;
+  border: 1px solid #15253c;
+  color: #15253c;
   font-size: 2rem;
   padding: 5px 12px;
   margin-right: 5px;

@@ -61,8 +61,7 @@ section.sliderIMG {
                 &:hover{
                     //border: none;
                     border-color: $primary-color;
-                    transform: translateY(15px);
-                    padding: 2rem;
+                    transform: translateY(15px) scale(0.95);
                     i{
                         color: $secondary-color;
                     }

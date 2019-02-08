@@ -60,4 +60,4 @@ setTimeout(generateItems,0)
 setTimeout(setAll,0)
 window.addEventListener('resize',setAll)
 
-setInterval(sliderRoll,1500);
+setInterval(sliderRoll,3000);

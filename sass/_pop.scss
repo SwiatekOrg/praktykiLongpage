@@ -39,7 +39,8 @@
         }
         input{
             box-sizing: border-box;
-            border: none;
+            border: 1px solid $primary-color;
+            color: $primary-color;
             font-size: 2rem;
             padding: 5px 12px;
             margin-right: 5px;
