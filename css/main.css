@@ -783,7 +783,7 @@ section.sliderIMG {
   max-width: 90px;
   -webkit-filter: invert(1);
           filter: invert(1);
-  padding-bottom: 50px;
+  padding-bottom: 50 px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
