@@ -8,6 +8,7 @@
         height: 60px;
         background-color: $primary-color;
         .nav-list{
+            transition: .9s linear all;
             top: 60px;
         }
         .nav-header-img{
@@ -180,6 +181,7 @@
             nav{
                 ol{
                     flex-direction: column;
+                    padding-right: 0;
                     li{
                         text-align: center;
                         a{
